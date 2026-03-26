@@ -1,0 +1,159 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.footer {
+  background-color: #22262F;
+  color: rgba($color-white, 0.6);
+}
+
+.top {
+  @include container;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: $sp-20;
+  padding-top: $sp-20;
+  padding-bottom: $sp-16;
+  border-bottom: 1px solid rgba($color-white, 0.08);
+
+  @include below('lg') {
+    grid-template-columns: 1fr;
+    gap: $sp-12;
+  }
+}
+
+// ─── Brand ───────────────────────────────────────────────────
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-5;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-decoration: none;
+}
+
+.logoWBC {
+  font-family: $font-display;
+  font-size: $fs-xl;
+  font-weight: $fw-bold;
+  color: $color-red;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.logoFull {
+  font-family: $font-sans;
+  font-size: $fs-xs;
+  font-weight: $fw-medium;
+  color: rgba($color-white, 0.45);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.tagline {
+  font-family: $font-sans;
+  font-size: $fs-sm;
+  line-height: $lh-relaxed;
+  color: rgba($color-white, 0.5);
+  max-width: 260px;
+}
+
+.charity {
+  font-family: $font-display;
+  font-size: $fs-xs;
+  color: rgba($color-white, 0.3);
+  letter-spacing: 0.04em;
+}
+
+// ─── Link groups ─────────────────────────────────────────────
+.linkGroups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $sp-8;
+
+  @include below('sm') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-5;
+}
+
+.groupTitle {
+  font-family: $font-display;
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  color: $color-white;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.groupList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-3;
+}
+
+.link {
+  font-family: $font-sans;
+  font-size: $fs-sm;
+  color: rgba($color-white, 0.5);
+  text-decoration: none;
+  transition: color $t-fast;
+
+  &:hover {
+    color: $color-white;
+  }
+}
+
+// ─── Bottom bar ───────────────────────────────────────────────
+.bottom {
+  @include container;
+  @include flex-between;
+  padding-top: $sp-6;
+  padding-bottom: $sp-6;
+
+  @include below('sm') {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $sp-4;
+  }
+}
+
+.copy {
+  font-family: $font-sans;
+  font-size: $fs-xs;
+  color: rgba($color-white, 0.3);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+}
+
+.social {
+  width: 36px;
+  height: 36px;
+  border-radius: $r-full;
+  @include flex-center;
+  color: rgba($color-white, 0.4);
+  border: 1px solid rgba($color-white, 0.1);
+  transition: color $t-fast, border-color $t-fast, background-color $t-fast;
+
+  &:hover {
+    color: $color-white;
+    border-color: rgba($color-white, 0.3);
+    background-color: rgba($color-white, 0.06);
+  }
+}

@@ -1,0 +1,161 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.section {
+  @include section-padding;
+  background-color: $color-off-white;
+}
+
+.inner {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-16;
+}
+
+// ─── Header ──────────────────────────────────────────────────
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-5;
+  max-width: 600px;
+}
+
+.eyebrow {
+  @include label-text;
+  color: $color-teal-dark;
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background-color: $color-teal;
+    border-radius: $r-full;
+    flex-shrink: 0;
+  }
+}
+
+.heading {
+  @include section-heading;
+}
+
+.headingAccent {
+  @include teal-underline;
+}
+
+.sub {
+  font-family: $font-sans;
+  font-size: $fs-md;
+  line-height: $lh-relaxed;
+  color: $color-gray;
+}
+
+// ─── Grid ────────────────────────────────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $sp-6;
+
+  @include below('md') {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ─── Card ────────────────────────────────────────────────────
+.card {
+  background-color: $color-white;
+  border-radius: $r-xl;
+  padding: $sp-10;
+  border: 1px solid $color-gray-light;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-5;
+  transition: box-shadow $t-base, transform $t-base, border-color $t-base;
+
+  &:hover {
+    box-shadow: $shadow-lg;
+    transform: translateY(-4px);
+  }
+
+  @include below('sm') {
+    padding: $sp-8 $sp-6;
+  }
+}
+
+.accent_teal {
+  &:hover {
+    border-color: $color-teal;
+  }
+
+  .tag {
+    background-color: $color-teal-light;
+    color: $color-teal-dark;
+  }
+
+  .cardCta {
+    color: $color-teal-dark;
+
+    &:hover { color: $color-teal; }
+  }
+}
+
+.accent_red {
+  &:hover {
+    border-color: $color-red;
+  }
+
+  .tag {
+    background-color: $color-red-light;
+    color: $color-red;
+  }
+
+  .cardCta {
+    color: $color-red;
+
+    &:hover { color: $color-red-dark; }
+  }
+}
+
+.tag {
+  @include label-text;
+  padding: $sp-1 $sp-3;
+  border-radius: $r-full;
+  width: fit-content;
+  font-size: 10px;
+}
+
+.cardTitle {
+  font-family: $font-serif;
+  font-size: $fs-xl;
+  font-weight: $fw-normal;
+  color: $color-charcoal;
+  line-height: $lh-snug;
+}
+
+.cardText {
+  font-family: $font-sans;
+  font-size: $fs-sm;
+  line-height: $lh-relaxed;
+  color: $color-gray;
+  flex: 1;
+}
+
+.cardCta {
+  display: inline-flex;
+  align-items: center;
+  gap: $sp-2;
+  font-family: $font-display;
+  font-size: $fs-sm;
+  font-weight: $fw-semibold;
+  text-decoration: none;
+  transition: gap $t-fast, color $t-fast;
+  margin-top: $sp-2;
+
+  &:hover {
+    gap: $sp-3;
+  }
+}

@@ -1,0 +1,252 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+// ─── Section ──────────────────────────────────────────────────
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: $nav-height;
+  background-color: $color-off-white;
+}
+
+// ─── Background shapes ────────────────────────────────────────
+.bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bgShape1 {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba($color-teal, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+
+  @include below('md') {
+    width: 360px;
+    height: 360px;
+    top: -5%;
+    right: -20%;
+  }
+}
+
+.bgShape2 {
+  position: absolute;
+  bottom: -15%;
+  left: -8%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba($color-red, 0.07) 0%, transparent 70%);
+  border-radius: 50%;
+
+  @include below('md') {
+    width: 280px;
+    height: 280px;
+    bottom: 5%;
+    left: -15%;
+  }
+}
+
+// ─── Inner ────────────────────────────────────────────────────
+.inner {
+  @include container;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-16;
+  padding-top: $sp-16;
+  padding-bottom: $sp-16;
+
+  @include below('md') {
+    gap: $sp-12;
+    padding-top: $sp-10;
+    padding-bottom: $sp-10;
+  }
+}
+
+// ─── Content ──────────────────────────────────────────────────
+.content {
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-6;
+}
+
+.eyebrow {
+  @include label-text;
+  color: $color-teal-dark;
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background-color: $color-teal;
+    border-radius: $r-full;
+    flex-shrink: 0;
+  }
+}
+
+.heading {
+  @include display-heading;
+  font-size: $fs-6xl;
+
+  @include below('xl') { font-size: $fs-5xl; }
+  @include below('lg') { font-size: $fs-4xl; }
+  @include below('md') { font-size: $fs-3xl; }
+  @include below('sm') { font-size: $fs-2xl; }
+}
+
+.accent {
+  color: $color-red;
+  font-style: italic;
+}
+
+.subheading {
+  font-family: $font-sans;
+  font-size: $fs-md;
+  line-height: $lh-relaxed;
+  color: $color-gray;
+  max-width: 560px;
+}
+
+// ─── Actions ─────────────────────────────────────────────────
+.actions {
+  display: flex;
+  align-items: center;
+  gap: $sp-4;
+  flex-wrap: wrap;
+  margin-top: $sp-2;
+}
+
+.btnDonate {
+  @include btn-primary;
+  padding: $sp-4 $sp-10;
+  font-size: $fs-base;
+}
+
+.btnLearn {
+  @include btn-outline-dark;
+  padding: $sp-4 $sp-8;
+  font-size: $fs-base;
+}
+
+// ─── Stats bar ────────────────────────────────────────────────
+.stats {
+  display: flex;
+  align-items: center;
+  gap: $sp-10;
+  background-color: $color-white;
+  border: 1px solid $color-gray-light;
+  border-radius: $r-xl;
+  padding: $sp-8 $sp-10;
+  width: fit-content;
+  box-shadow: $shadow-sm;
+
+  @include below('md') {
+    gap: $sp-6;
+    padding: $sp-6 $sp-8;
+  }
+
+  @include below('sm') {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $sp-6;
+    width: 100%;
+  }
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-1;
+}
+
+.statNum {
+  font-family: $font-serif;
+  font-size: $fs-3xl;
+  font-weight: $fw-normal;
+  color: $color-charcoal;
+  line-height: 1;
+
+  @include below('md') { font-size: $fs-2xl; }
+}
+
+.statPlus {
+  color: $color-red;
+}
+
+.statLabel {
+  font-family: $font-display;
+  font-size: $fs-xs;
+  font-weight: $fw-medium;
+  color: $color-gray;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.statDivider {
+  width: 1px;
+  height: 48px;
+  background-color: $color-gray-light;
+  flex-shrink: 0;
+
+  @include below('sm') {
+    width: 40px;
+    height: 1px;
+  }
+}
+
+// ─── Scroll hint ──────────────────────────────────────────────
+.scrollHint {
+  position: absolute;
+  bottom: $sp-8;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  span {
+    display: block;
+    width: 24px;
+    height: 40px;
+    border: 2px solid rgba($color-charcoal, 0.25);
+    border-radius: $r-full;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 8px;
+      background-color: $color-red;
+      border-radius: $r-full;
+      animation: scrollDot 1.8s ease-in-out infinite;
+    }
+  }
+
+  @include below('md') {
+    display: none;
+  }
+}
+
+@keyframes scrollDot {
+  0%   { top: 6px; opacity: 1; }
+  60%  { top: 20px; opacity: 0.3; }
+  61%  { top: 6px; opacity: 0; }
+  100% { top: 6px; opacity: 1; }
+}

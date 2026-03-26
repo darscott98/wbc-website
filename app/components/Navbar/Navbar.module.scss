@@ -1,0 +1,222 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  transition: background-color $t-slow, box-shadow $t-slow;
+
+  // Transparent over hero
+  background-color: transparent;
+
+  &.scrolled {
+    background-color: $color-white;
+    box-shadow: 0 1px 0 $color-gray-light, $shadow-xs;
+  }
+}
+
+.nav {
+  @include container;
+  @include flex-between;
+  height: $nav-height;
+
+  @include below('md') {
+    height: $nav-height-mob;
+  }
+}
+
+// ─── Logo ─────────────────────────────────────────────────────
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logoWBC {
+  font-family: $font-display;
+  font-size: $fs-lg;
+  font-weight: $fw-bold;
+  color: $color-red;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.logoFull {
+  font-family: $font-sans;
+  font-size: $fs-xs;
+  font-weight: $fw-medium;
+  color: $color-charcoal;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1;
+
+  .scrolled & {
+    color: $color-charcoal;
+  }
+}
+
+// When nav is over light hero, keep text visible
+.header:not(.scrolled) .logoFull {
+  color: rgba($color-charcoal, 0.7);
+}
+
+// ─── Desktop Nav Links ────────────────────────────────────────
+.links {
+  display: flex;
+  align-items: center;
+  gap: $sp-1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include below('lg') {
+    display: none;
+  }
+}
+
+.link {
+  font-family: $font-display;
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+  color: $color-charcoal;
+  padding: $sp-2 $sp-4;
+  border-radius: $r-full;
+  transition: color $t-fast, background-color $t-fast;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+
+  &:hover {
+    color: $color-red;
+    background-color: $color-red-light;
+  }
+}
+
+// ─── Desktop Donate CTA ───────────────────────────────────────
+.donateCta {
+  @include btn-primary;
+  padding: $sp-2 $sp-6;
+
+  @include below('lg') {
+    display: none;
+  }
+}
+
+// ─── Mobile Burger ────────────────────────────────────────────
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: $sp-2;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: $r-md;
+  transition: background-color $t-fast;
+
+  &:hover {
+    background-color: $color-red-light;
+  }
+
+  span {
+    display: block;
+    height: 2px;
+    background-color: $color-charcoal;
+    border-radius: $r-full;
+    transition: all $t-base;
+    transform-origin: center;
+
+    &:nth-child(1) { width: 22px; }
+    &:nth-child(2) { width: 16px; }
+    &:nth-child(3) { width: 22px; }
+  }
+
+  &.burgerOpen span {
+    &:nth-child(1) {
+      width: 22px;
+      transform: translateY(7px) rotate(45deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    &:nth-child(3) {
+      width: 22px;
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+
+  @include below('lg') {
+    display: flex;
+  }
+}
+
+// ─── Mobile Drawer ────────────────────────────────────────────
+.drawer {
+  position: fixed;
+  top: $nav-height-mob;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-white;
+  padding: $sp-8 $sp-5;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-8;
+
+  // Hidden by default
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity $t-base, transform $t-base;
+
+  &.drawerOpen {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  @include above('lg') {
+    display: none;
+  }
+}
+
+.drawerLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-1;
+}
+
+.drawerLink {
+  display: block;
+  font-family: $font-display;
+  font-size: $fs-xl;
+  font-weight: $fw-medium;
+  color: $color-charcoal;
+  padding: $sp-4 $sp-4;
+  border-radius: $r-lg;
+  text-decoration: none;
+  transition: color $t-fast, background-color $t-fast;
+
+  &:hover {
+    color: $color-red;
+    background-color: $color-red-light;
+  }
+}
+
+.drawerCta {
+  @include btn-primary;
+  align-self: flex-start;
+  padding: $sp-4 $sp-10;
+  font-size: $fs-base;
+}

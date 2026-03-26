@@ -1,0 +1,122 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.section {
+  @include section-padding;
+  background-color: $color-charcoal;
+  color: $color-white;
+}
+
+.inner {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $sp-20;
+  align-items: center;
+
+  @include below('lg') {
+    grid-template-columns: 1fr;
+    gap: $sp-12;
+  }
+}
+
+// ─── Left ────────────────────────────────────────────────────
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-6;
+}
+
+.eyebrow {
+  @include label-text;
+  color: $color-teal;
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background-color: $color-teal;
+    border-radius: $r-full;
+    flex-shrink: 0;
+  }
+}
+
+.heading {
+  font-family: $font-serif;
+  font-size: $fs-4xl;
+  font-weight: $fw-normal;
+  line-height: $lh-snug;
+  color: $color-white;
+
+  @include below('md') { font-size: $fs-3xl; }
+  @include below('sm') { font-size: $fs-2xl; }
+}
+
+.body {
+  font-family: $font-sans;
+  font-size: $fs-base;
+  line-height: $lh-relaxed;
+  color: rgba($color-white, 0.65);
+}
+
+.cta {
+  @include btn-primary;
+  align-self: flex-start;
+  padding: $sp-4 $sp-8;
+  font-size: $fs-base;
+  margin-top: $sp-2;
+}
+
+// ─── Right – Stats grid ───────────────────────────────────────
+.right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $sp-1;
+
+  @include below('sm') {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat {
+  padding: $sp-10 $sp-8;
+  border-radius: $r-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-2;
+  background-color: rgba($color-white, 0.04);
+  transition: background-color $t-base;
+
+  &:hover {
+    background-color: rgba($color-white, 0.08);
+  }
+}
+
+.color_red .statNum { color: $color-red; }
+.color_teal .statNum { color: $color-teal; }
+
+.statNum {
+  font-family: $font-serif;
+  font-size: $fs-5xl;
+  font-weight: $fw-normal;
+  line-height: 1;
+
+  @include below('xl') { font-size: $fs-4xl; }
+  @include below('md') { font-size: $fs-3xl; }
+}
+
+.suffix {
+  font-size: 0.6em;
+  vertical-align: super;
+}
+
+.statLabel {
+  font-family: $font-sans;
+  font-size: $fs-sm;
+  line-height: $lh-normal;
+  color: rgba($color-white, 0.55);
+}

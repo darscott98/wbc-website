@@ -1,0 +1,87 @@
+// ─── WBC Brand Colors ────────────────────────────────────────
+$color-red:         #F33D3C;  // Primary — CTAs, bold accents
+$color-red-dark:    #d42f2e;  // Hover state
+$color-red-light:   #fdf0f0;  // Tinted backgrounds
+
+$color-teal:        #36D1B5;  // Accent — hope, wellness
+$color-teal-dark:   #28a892;
+$color-teal-light:  #edfaf7;
+
+$color-charcoal:    #3C404B;  // Primary text
+$color-gray:        #7B808A;  // Secondary text
+$color-gray-light:  #EDEDED;  // Borders, dividers
+$color-off-white:   #FAF9F7;  // Alt section backgrounds
+$color-white:       #FFFFFF;
+
+// ─── Typography ──────────────────────────────────────────────
+$font-serif:   var(--font-prata), 'Prata', Georgia, serif;
+$font-sans:    var(--font-red-hat-text), 'Red Hat Text', Arial, sans-serif;
+$font-display: var(--font-red-hat-display), 'Red Hat Display', Arial, sans-serif;
+
+// Scale
+$fs-xs:   0.75rem;   // 12px
+$fs-sm:   0.875rem;  // 14px
+$fs-base: 1rem;      // 16px
+$fs-md:   1.125rem;  // 18px
+$fs-lg:   1.25rem;   // 20px
+$fs-xl:   1.5rem;    // 24px
+$fs-2xl:  1.875rem;  // 30px
+$fs-3xl:  2.25rem;   // 36px
+$fs-4xl:  2.875rem;  // 46px
+$fs-5xl:  3.75rem;   // 60px
+$fs-6xl:  5rem;      // 80px
+
+$fw-normal:   400;
+$fw-medium:   500;
+$fw-semibold: 600;
+$fw-bold:     700;
+
+$lh-tight:   1.15;
+$lh-snug:    1.3;
+$lh-normal:  1.6;
+$lh-relaxed: 1.75;
+
+// ─── Spacing ─────────────────────────────────────────────────
+$sp-1:  0.25rem;
+$sp-2:  0.5rem;
+$sp-3:  0.75rem;
+$sp-4:  1rem;
+$sp-5:  1.25rem;
+$sp-6:  1.5rem;
+$sp-8:  2rem;
+$sp-10: 2.5rem;
+$sp-12: 3rem;
+$sp-16: 4rem;
+$sp-20: 5rem;
+$sp-24: 6rem;
+$sp-32: 8rem;
+
+// ─── Layout ──────────────────────────────────────────────────
+$container-max:  1200px;
+$nav-height:     80px;
+$nav-height-mob: 64px;
+
+// ─── Radii ───────────────────────────────────────────────────
+$r-sm:   4px;
+$r-md:   8px;
+$r-lg:   16px;
+$r-xl:   24px;
+$r-2xl:  40px;
+$r-full: 9999px;
+
+// ─── Shadows ─────────────────────────────────────────────────
+$shadow-xs: 0 1px 3px rgba(60, 64, 75, 0.08);
+$shadow-sm: 0 2px 8px rgba(60, 64, 75, 0.10);
+$shadow-md: 0 8px 24px rgba(60, 64, 75, 0.12);
+$shadow-lg: 0 20px 48px rgba(60, 64, 75, 0.14);
+
+// ─── Transitions ─────────────────────────────────────────────
+$t-fast:   150ms ease;
+$t-base:   220ms ease;
+$t-slow:   350ms ease;
+
+// ─── Breakpoints ─────────────────────────────────────────────
+$bp-sm:  640px;
+$bp-md:  768px;
+$bp-lg:  1024px;
+$bp-xl:  1280px;

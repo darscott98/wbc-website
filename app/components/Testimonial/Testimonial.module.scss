@@ -1,0 +1,127 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.section {
+  @include section-padding;
+  background-color: $color-white;
+}
+
+.inner {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-12;
+}
+
+// ─── Header ──────────────────────────────────────────────────
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-4;
+}
+
+.eyebrow {
+  @include label-text;
+  color: $color-teal-dark;
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background-color: $color-teal;
+    border-radius: $r-full;
+    flex-shrink: 0;
+  }
+}
+
+.heading {
+  @include section-heading;
+}
+
+// ─── Grid ────────────────────────────────────────────────────
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $sp-6;
+
+  @include below('lg') {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+}
+
+// ─── Card ────────────────────────────────────────────────────
+.card {
+  background-color: $color-off-white;
+  border-radius: $r-xl;
+  padding: $sp-10 $sp-8;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-6;
+  border: 1px solid $color-gray-light;
+  transition: box-shadow $t-base, transform $t-base;
+  margin: 0;
+
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-4px);
+  }
+}
+
+.quoteMark {
+  font-family: $font-serif;
+  font-size: 64px;
+  line-height: 0.6;
+  color: $color-red;
+  opacity: 0.5;
+  user-select: none;
+}
+
+.quote {
+  font-family: $font-serif;
+  font-size: $fs-base;
+  line-height: $lh-relaxed;
+  color: $color-charcoal;
+  font-style: italic;
+  flex: 1;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: $sp-4;
+  padding-top: $sp-6;
+  border-top: 1px solid $color-gray-light;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: $r-full;
+  background-color: $color-red-light;
+  color: $color-red;
+  @include flex-center;
+  font-family: $font-display;
+  font-size: $fs-xs;
+  font-weight: $fw-bold;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.name {
+  font-family: $font-display;
+  font-size: $fs-sm;
+  font-weight: $fw-semibold;
+  color: $color-charcoal;
+}
+
+.detail {
+  font-family: $font-sans;
+  font-size: $fs-xs;
+  color: $color-gray;
+  margin-top: 2px;
+}

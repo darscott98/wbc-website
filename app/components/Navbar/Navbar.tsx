@@ -1,0 +1,88 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import styles from './Navbar.module.scss'
+
+const navLinks = [
+  { href: '#about',     label: 'About' },
+  { href: '#programs',  label: 'What We Do' },
+  { href: '#impact',    label: 'Our Impact' },
+  { href: '#stories',   label: 'Stories' },
+  { href: '#events',    label: 'Events' },
+]
+
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
+
+  return (
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+      <nav className={styles.nav}>
+        {/* Logo */}
+        <Link href="/" className={styles.logo} onClick={() => setMenuOpen(false)}>
+          <span className={styles.logoWBC}>WBC</span>
+          <span className={styles.logoFull}>Women Beyond Cancer</span>
+        </Link>
+
+        {/* Desktop links */}
+        <ul className={styles.links}>
+          {navLinks.map(({ href, label }) => (
+            <li key={href}>
+              <a href={href} className={styles.link}>{label}</a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Desktop CTA */}
+        <a href="#donate" className={styles.donateCta}>
+          Donate
+        </a>
+
+        {/* Mobile hamburger */}
+        <button
+          className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
+          onClick={() => setMenuOpen((p) => !p)}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </nav>
+
+      {/* Mobile drawer */}
+      <div className={`${styles.drawer} ${menuOpen ? styles.drawerOpen : ''}`}>
+        <ul className={styles.drawerLinks}>
+          {navLinks.map(({ href, label }) => (
+            <li key={href}>
+              <a
+                href={href}
+                className={styles.drawerLink}
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <a href="#donate" className={styles.drawerCta} onClick={() => setMenuOpen(false)}>
+          Donate Now
+        </a>
+      </div>
+    </header>
+  )
+}

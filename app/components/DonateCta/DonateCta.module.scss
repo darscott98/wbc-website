@@ -1,0 +1,127 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.section {
+  @include section-padding;
+  background-color: $color-red;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: $color-white;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bgCircle {
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba($color-white, 0.06) 0%, transparent 70%);
+}
+
+.inner {
+  @include container;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $sp-6;
+}
+
+.eyebrow {
+  @include label-text;
+  color: rgba($color-white, 0.7);
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background-color: rgba($color-white, 0.4);
+  }
+}
+
+.heading {
+  font-family: $font-serif;
+  font-size: $fs-5xl;
+  font-weight: $fw-normal;
+  line-height: $lh-tight;
+  color: $color-white;
+
+  @include below('lg') { font-size: $fs-4xl; }
+  @include below('md') { font-size: $fs-3xl; }
+  @include below('sm') { font-size: $fs-2xl; }
+}
+
+.body {
+  font-family: $font-sans;
+  font-size: $fs-md;
+  line-height: $lh-relaxed;
+  color: rgba($color-white, 0.8);
+  max-width: 580px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: $sp-4;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: $sp-4;
+}
+
+.btnDonate {
+  @include btn-base;
+  background-color: $color-white;
+  color: $color-red;
+  border-color: $color-white;
+  padding: $sp-4 $sp-10;
+  font-size: $fs-base;
+
+  &:hover {
+    background-color: rgba($color-white, 0.92);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.btnVolunteer {
+  @include btn-outline-white;
+  padding: $sp-4 $sp-8;
+  font-size: $fs-base;
+}
+
+// ─── Trust signals ────────────────────────────────────────────
+.trust {
+  display: flex;
+  align-items: center;
+  gap: $sp-8;
+  margin-top: $sp-4;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include below('sm') { gap: $sp-5; }
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: $sp-2;
+  font-family: $font-display;
+  font-size: $fs-xs;
+  font-weight: $fw-medium;
+  color: rgba($color-white, 0.65);
+  letter-spacing: 0.02em;
+}

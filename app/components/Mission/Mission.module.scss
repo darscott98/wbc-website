@@ -1,0 +1,108 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.section {
+  @include section-padding;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-gray-light;
+}
+
+.inner {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-12;
+  align-items: center;
+  text-align: center;
+}
+
+.label {
+  @include label-text;
+  color: $color-teal-dark;
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background-color: $color-teal;
+  }
+}
+
+.quote {
+  font-family: $font-serif;
+  font-size: $fs-2xl;
+  font-style: normal;
+  font-weight: $fw-normal;
+  line-height: $lh-snug;
+  color: $color-charcoal;
+  max-width: 820px;
+  quotes: none;
+
+  @include below('md') { font-size: $fs-xl; }
+  @include below('sm') { font-size: $fs-lg; }
+}
+
+.highlight {
+  color: $color-red;
+  font-style: italic;
+}
+
+// ─── Pillars ─────────────────────────────────────────────────
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $sp-8;
+  width: 100%;
+  margin-top: $sp-4;
+
+  @include below('md') {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+  }
+}
+
+.pillar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $sp-4;
+  padding: $sp-8;
+  border-radius: $r-xl;
+  border: 1px solid $color-gray-light;
+  transition: border-color $t-base, box-shadow $t-base, transform $t-base;
+
+  &:hover {
+    border-color: $color-teal;
+    box-shadow: $shadow-md;
+    transform: translateY(-4px);
+  }
+}
+
+.pillarIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: $r-full;
+  background-color: $color-teal-light;
+  color: $color-teal-dark;
+  @include flex-center;
+  flex-shrink: 0;
+}
+
+.pillarTitle {
+  font-family: $font-serif;
+  font-size: $fs-xl;
+  font-weight: $fw-normal;
+  color: $color-charcoal;
+}
+
+.pillarText {
+  font-family: $font-sans;
+  font-size: $fs-sm;
+  line-height: $lh-relaxed;
+  color: $color-gray;
+}
