@@ -1,6 +1,6 @@
 'use client'
 
-import type { FormEvent } from 'react'
+import type { SubmitEvent } from 'react'
 import { useState } from 'react'
 import { Alert, Button, Col, Form, Row } from 'react-bootstrap'
 import styles from './NewsletterForm.module.scss'
@@ -13,7 +13,7 @@ export default function NewsletterForm() {
   const [status, setStatus] = useState<FormStatus>('idle')
   const [message, setMessage] = useState('')
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault()
     setStatus('submitting')
     setMessage('')
