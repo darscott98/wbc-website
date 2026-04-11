@@ -214,3 +214,64 @@
     border-color: $color-teal-dark;
   }
 }
+
+// ─── References ───────────────────────────────────────────────
+.referencesSection {
+  @include section-padding;
+  background-color: $color-white;
+  border-top: 1px solid $color-gray-light;
+}
+
+.referencesInner {
+  @include container;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-5;
+}
+
+.referencesHeading {
+  font-family: $font-serif;
+  font-size: $fs-2xl;
+  font-weight: $fw-normal;
+  color: $color-charcoal;
+
+  @include below('md') { font-size: $fs-xl; }
+}
+
+.referencesIntro {
+  font-family: $font-sans;
+  font-size: $fs-base;
+  line-height: $lh-relaxed;
+  color: $color-gray;
+  max-width: 760px;
+}
+
+.referencesList {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-4;
+}
+
+.referenceItem {
+  font-family: $font-sans;
+  font-size: $fs-sm;
+  line-height: $lh-relaxed;
+  color: $color-charcoal;
+
+  span {
+    font-style: italic;
+  }
+}
+
+.referenceLink {
+  color: $color-red-dark;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: $color-charcoal;
+  }
+}

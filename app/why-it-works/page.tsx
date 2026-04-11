@@ -32,46 +32,42 @@ export default function WhyItWorksPage() {
             The end of treatment is not the end of the experience.
           </h2>
           <p className={styles.sectionBody}>
-            We have made enormous progress in treating cancer. Survival rates continue to improve,
-            and there are currently around 570,000 women living beyond a breast cancer diagnosis
-            in the UK alone. But in the gap between clinical success and genuine wellbeing, there
-            is a significant and largely unaddressed problem.
+            We have made enormous progress in treating cancer, but the period after treatment can
+            still be one of the most psychologically demanding parts of the journey. In a large UK
+            prospective survey of people finishing treatment, 30% reported more than five moderate
+            or severe unmet needs at the end of treatment — and for 60% of that group, the
+            situation had not improved six months later. The most commonly reported unmet needs
+            were psychological, especially fear of recurrence.[1]
           </p>
           <p className={styles.sectionBody}>
-            Research consistently shows that finishing active cancer treatment can, paradoxically,
-            be one of the most psychologically vulnerable moments in a cancer journey.
+            Loneliness and disconnection are also common. A 2024 UK study of 5,835 people living
+            with and beyond cancer found that 19% reported higher loneliness, and those
+            participants were less likely to meet recommendations for physical activity, fruit and
+            vegetable intake, and smoking avoidance.[2] In other words, isolation is not just
+            emotionally painful; it is closely tied to the everyday behaviours that support
+            recovery.
           </p>
           <div className={styles.statHighlights}>
             <div className={styles.statCard}>
-              <span className={styles.statFigure}>84%</span>
+              <span className={styles.statFigure}>30%</span>
               <p className={styles.statDesc}>
-                of women with breast cancer had not been provided with any information about the
-                potential long-term mental health effects of their cancer.
-                <br /><em>Survey of 2,862 women in England, 2018</em>
+                reported more than five moderate or severe unmet needs immediately after treatment.
+                <br /><em>Armes et al., J Clin Oncol, 2009</em>
               </p>
             </div>
             <div className={styles.statCard}>
-              <span className={styles.statFigure}>75%</span>
+              <span className={styles.statFigure}>19%</span>
               <p className={styles.statDesc}>
-                reported feeling more socially isolated at the end of treatment than at the
-                time of their diagnosis.
-                <br /><em>Survey of 2,862 women in England, 2018</em>
+                of 5,485 UK adults living with and beyond cancer reported higher loneliness.
+                <br /><em>Smith et al., BMC Public Health, 2024</em>
               </p>
             </div>
           </div>
           <p className={styles.sectionBody}>
-            This is not an individual failing. It is a structural one. A UK NHS survey found that
-            post-treatment follow-up care is neither universal nor consistent — and even where it
-            does exist, it frequently fails to address the psychological and emotional needs that
-            healthcare professionals themselves identify as most important: fear of recurrence,
-            fatigue, anxiety, and depression.
-          </p>
-          <p className={styles.sectionBody}>
-            A large-scale UK study tracking over 57,000 women with a history of breast cancer
-            found that cancer survivorship is associated with significantly raised risks of
-            anxiety, depression, sleep disorders, and fatigue — persisting well into the
-            survivorship period, sometimes years beyond the end of treatment. Women Beyond Cancer
-            was built specifically for that chapter.
+            This is why survivorship support matters. The challenge after treatment is not simply
+            &ldquo;getting back to normal&rdquo;; it is navigating uncertainty, fatigue, identity change,
+            and the sudden absence of the clinical structure that carried many women through
+            treatment in the first place.[1][2]
           </p>
         </div>
       </section>
@@ -82,33 +78,23 @@ export default function WhyItWorksPage() {
           <p className={styles.sectionLabel}>Pillar One</p>
           <h2 className={styles.sectionHeading}>Therapeutic Journaling</h2>
           <p className={styles.sectionBody}>
-            Expressive writing has one of the longest and most robust evidence bases of any
-            psychological self-help practice. The foundational work of Dr James Pennebaker and
-            colleagues established that writing about difficult experiences produces measurable
-            improvements in both psychological and physical health outcomes — and this work has
-            been replicated and extended in the context of cancer specifically.
+            Expressive writing is one of the most studied low-cost psychosocial practices in
+            cancer care. A 2023 systematic review and meta-analysis covering 34 studies and 4,316
+            participants found improvements in fatigue, passive mood, and the physical dimension
+            of quality of life, even though effects on anxiety and depression were not consistent
+            across all studies.[3]
           </p>
           <p className={styles.sectionBody}>
-            Multiple studies have found that expressive and reflective writing can improve
-            psychological wellbeing and lower anxiety in cancer patients and survivors. Writing
-            about the cancer experience has been linked to decreased pain, improved emotional
-            regulation, and what researchers call <em>post-traumatic growth</em> — a positive,
-            meaningful shift in how people understand themselves and their lives following a
-            period of significant adversity.
+            That nuance matters. An earlier meta-analysis of 16 randomized trials concluded that
+            expressive writing is not a universal fix for every cancer survivor, but it may be
+            more helpful for subgroups facing higher distress or lower emotional support.[4]
+            In practice, writing tends to work best when it is structured, intentional, and
+            supported rather than left completely open-ended.
           </p>
           <p className={styles.sectionBody}>
-            A 2025 systematic review examining writing interventions specifically with cancer
-            survivors identified multiple beneficial effects, including improvements in
-            psychopathological symptoms, bio-psycho-social wellbeing, and the management of
-            treatment side effects. Crucially, the review found that guided, structured writing —
-            the kind offered in Women Beyond Cancer — tends to produce stronger effects than
-            unguided writing alone.
-          </p>
-          <p className={styles.sectionBody}>
-            What matters in Women Beyond Cancer is not journaling as diary-keeping. It is
-            journaling as a practice — guided, progressive, and purposefully structured to help
-            women process what has happened, understand how they are changing, and begin to
-            author their own story of what comes next.
+            What matters in Women Beyond Cancer is not journaling as diary-keeping. It is guided
+            reflective practice: prompts that help women name what has happened, make meaning of
+            it, and gradually rebuild a sense of continuity and agency.[3][4]
           </p>
         </div>
       </section>
@@ -119,33 +105,22 @@ export default function WhyItWorksPage() {
           <p className={styles.sectionLabel}>Pillar Two</p>
           <h2 className={styles.sectionHeading}>Forest Bathing and Time in Nature</h2>
           <p className={styles.sectionBody}>
-            The practice of <em>Shinrin-yoku</em> — forest bathing — originated in Japan in the
-            1980s and has since accumulated a significant international body of research. It
-            refers not to hiking or exercise, but to the deliberate, unhurried experience of
-            being present within a natural environment using all the senses.
+            The practice of <em>Shinrin-yoku</em> — forest bathing — has moved well beyond the
+            language of wellness trends and into a growing research literature. It refers not to
+            strenuous exercise, but to slow, sensory immersion in a natural environment.
           </p>
           <p className={styles.sectionBody}>
-            The evidence for its benefits is striking. A meta-analysis examining 20 studies
-            across Asia and Europe found that forest bathing produces meaningful reductions in
-            anxiety, depression, and anger in the short term. A systematic review found
-            consistent positive effects on self-reported mood alongside measurable physiological
-            changes — including reductions in cortisol (the body&apos;s primary stress hormone),
-            improvements in heart rate variability, and increased blood serotonin levels.
+            A 2023 systematic review and meta-analysis of 36 studies involving 3,554 participants
+            found that forest bathing significantly reduced symptoms of depression and anxiety.[5]
+            A 2021 meta-analysis focused specifically on forest therapy likewise reported
+            significant improvements in both depression and anxiety across 20 studies.[6]
           </p>
           <p className={styles.sectionBody}>
-            Research on women with depression specifically found that forest bathing significantly
-            reduced depression scores compared to urban walking, with effects lasting for at least
-            one week after a single session. The same study found significant increases in
-            oxytocin — a hormone associated with connection, calm, and social bonding — following
-            forest immersion.
-          </p>
-          <p className={styles.sectionBody}>
-            These are not marginal effects. They are physiological, measurable, and meaningful —
-            and they are especially relevant for women coming out of cancer treatment, whose
-            nervous systems have often been under sustained stress for months or years. The
-            quarterly forest bathing sessions within Women Beyond Cancer are not a pleasant extra.
-            They are a clinically-informed component of recovery, delivered by an accredited
-            guide, in Swansea&apos;s green spaces.
+            The physiological evidence is more mixed than the psychological evidence, but the
+            overall direction is encouraging: nature-based interventions appear to reduce stress
+            and restore calm without asking people to push through or perform. For women coming
+            out of cancer treatment, that combination of gentleness, embodiment, and emotional
+            regulation is highly relevant.[5][6]
           </p>
         </div>
       </section>
@@ -156,34 +131,24 @@ export default function WhyItWorksPage() {
           <p className={styles.sectionLabel}>Pillar Three</p>
           <h2 className={styles.sectionHeading}>Peer Community and Belonging</h2>
           <p className={styles.sectionBody}>
-            Perhaps the most underestimated element of life after cancer is the loneliness —
-            and how little-discussed it is outside of the experience itself. The research is
-            unambiguous: social isolation is one of the strongest predictors of poor mental
-            health outcomes in cancer survivors.
+            Perhaps the most underestimated element of life after cancer is loneliness — and how
+            little-discussed it can be once treatment ends. The evidence above suggests that
+            isolation remains common well into survivorship and is tied not only to distress, but
+            also to the everyday health behaviours that support long-term recovery.[2]
           </p>
           <p className={styles.sectionBody}>
-            A large UK study specifically examining loneliness in people living beyond cancer
-            found that it is both prevalent and significantly associated with a range of
-            unhealthy patterns — a vicious cycle in which isolation and poor wellbeing reinforce
-            one another. Critically, research has identified that the transition off active
-            treatment is a particularly isolating moment — precisely because it coincides with
-            the withdrawal of structured clinical support and, often, the reduced attentiveness
-            of friends and family who assume that the hard part is over.
+            Peer support addresses something professional care alone cannot: the relief of being
+            understood by someone who does not need the experience explained. A 2023 systematic
+            review of 18 randomized controlled trials found small but meaningful benefits of
+            peer-to-peer support for outcomes such as depression and anxiety, coping, sexual
+            functioning, and cancer-specific quality of life, with particularly promising findings
+            in breast cancer and face-to-face settings.[7]
           </p>
           <p className={styles.sectionBody}>
-            Peer support — connection with others who share the same experience — addresses
-            something that professional support alone cannot: the felt sense of being truly
-            understood. Research on peer support for cancer survivors has found significant
-            improvements in psychological wellbeing, resilience, and quality of life, as well
-            as reductions in depression, anxiety, and fear of recurrence. The simply, the
-            feeling of <em>&ldquo;no explaining required&rdquo;</em> has profound therapeutic value.
-          </p>
-          <p className={styles.sectionBody}>
-            The fortnightly peer support groups within Women Beyond Cancer are not incidental
-            conversation. They are a carefully held space designed to offer exactly what the
-            evidence says women need most at this stage: the experience of being in a room —
-            even a virtual one — with people who genuinely understand, without qualification
-            or caveat, what this is like.
+            The fortnightly peer support groups within Women Beyond Cancer are therefore not
+            incidental conversation. They are a deliberately held space designed to reduce
+            isolation, strengthen coping, and restore a sense of belonging at a point where many
+            women feel unexpectedly alone.[2][7]
           </p>
         </div>
       </section>
@@ -208,6 +173,65 @@ export default function WhyItWorksPage() {
           <a href="/#waitlist" className={styles.noteCta}>
             Join the Waitlist
           </a>
+        </div>
+      </section>
+
+      <section className={styles.referencesSection} aria-labelledby="references-title">
+        <div className={styles.referencesInner}>
+          <p className={styles.sectionLabel}>References</p>
+          <h2 id="references-title" className={styles.referencesHeading}>
+            Selected studies and sources
+          </h2>
+          <p className={styles.referencesIntro}>
+            These are the key papers used to ground the claims on this page. They are not
+            exhaustive, but they reflect the evidence base behind the programme.
+          </p>
+          <ol className={styles.referencesList}>
+            <li className={styles.referenceItem}>
+              Armes J, Crowe M, Colbourne L, et al. <em>Patients&apos; supportive care needs beyond
+              the end of cancer treatment: a prospective, longitudinal survey.</em> <span>J Clin
+              Oncol.</span> 2009;27(36):6172-6179.{' '}
+              <a className={styles.referenceLink} href="https://pubmed.ncbi.nlm.nih.gov/19884548/" target="_blank" rel="noreferrer">PubMed</a>
+            </li>
+            <li className={styles.referenceItem}>
+              Smith S, Lally P, Steptoe A, Chavez-Ugalde Y, Beeken RJ, Fisher A. <em>Prevalence
+              of loneliness and associations with health behaviours and body mass index in 5835
+              people living with and beyond cancer: a cross-sectional study.</em>{' '}
+              <span>BMC Public Health.</span> 2024;24:635.{' '}
+              <a className={styles.referenceLink} href="https://pubmed.ncbi.nlm.nih.gov/38419011/" target="_blank" rel="noreferrer">PubMed</a>
+            </li>
+            <li className={styles.referenceItem}>
+              Abu-Odah H, Su JJ, Wang M, Sheffield D, Molassiotis A. <em>Systematic review and
+              meta-analysis of the effectiveness of expressive writing disclosure on cancer and
+              palliative care patients&apos; health-related outcomes.</em> <span>Support Care
+              Cancer.</span> 2024;32(1):70.{' '}
+              <a className={styles.referenceLink} href="https://pubmed.ncbi.nlm.nih.gov/38157056/" target="_blank" rel="noreferrer">PubMed</a>
+            </li>
+            <li className={styles.referenceItem}>
+              Zachariae R, O&apos;Toole MS. <em>The effect of expressive writing intervention on
+              psychological and physical health outcomes in cancer patients—a systematic review and
+              meta-analysis.</em> <span>Psychooncology.</span> 2015;24(11):1349-1359.{' '}
+              <a className={styles.referenceLink} href="https://pubmed.ncbi.nlm.nih.gov/25871981/" target="_blank" rel="noreferrer">PubMed</a>
+            </li>
+            <li className={styles.referenceItem}>
+              Siah CJR, Goh YS, Lee J, et al. <em>The effects of forest bathing on psychological
+              well-being: a systematic review and meta-analysis.</em> <span>Int J Ment Health
+              Nurs.</span> 2023;32(4):1038-1054.{' '}
+              <a className={styles.referenceLink} href="https://europepmc.org/article/MED/36864583" target="_blank" rel="noreferrer">Europe PMC</a>
+            </li>
+            <li className={styles.referenceItem}>
+              Yeon PS, Jeon JY, Jung MS, et al. <em>Effect of Forest Therapy on Depression and
+              Anxiety: A Systematic Review and Meta-Analysis.</em> <span>Int J Environ Res Public
+              Health.</span> 2021;18(23):12685.{' '}
+              <a className={styles.referenceLink} href="https://pubmed.ncbi.nlm.nih.gov/34886407/" target="_blank" rel="noreferrer">PubMed</a>
+            </li>
+            <li className={styles.referenceItem}>
+              Kiemen A, Czornik M, Weis J. <em>How effective is peer-to-peer support in cancer
+              patients and survivors? A systematic review.</em> <span>J Cancer Res Clin Oncol.</span>{' '}
+              2023;149(11):9461-9485.{' '}
+              <a className={styles.referenceLink} href="https://europepmc.org/article/MED/37120782" target="_blank" rel="noreferrer">Europe PMC</a>
+            </li>
+          </ol>
         </div>
       </section>
     </>
