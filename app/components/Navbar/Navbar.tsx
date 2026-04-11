@@ -8,8 +8,6 @@ const navLinks = [
   { href: '#about',     label: 'About' },
   { href: '#programs',  label: 'What We Do' },
   { href: '#impact',    label: 'Our Impact' },
-  { href: '#stories',   label: 'Stories' },
-  { href: '#events',    label: 'Events' },
 ]
 
 export default function Navbar() {
@@ -33,7 +31,6 @@ export default function Navbar() {
       <nav className={styles.nav}>
         {/* Logo */}
         <Link href="/" className={styles.logo} onClick={() => setMenuOpen(false)}>
-          <span className={styles.logoWBC}>WBC</span>
           <span className={styles.logoFull}>Women Beyond Cancer</span>
         </Link>
 
