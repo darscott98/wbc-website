@@ -103,11 +103,51 @@
   }
 }
 
+.consentGroup {
+  margin-top: $sp-6;
+}
+
+.consentCheck {
+  color: rgba($color-white, 0.84);
+
+  :global(.form-check-input) {
+    margin-top: 0.3rem;
+    border-color: rgba($color-white, 0.45);
+    background-color: transparent;
+  }
+
+  :global(.form-check-input:checked) {
+    background-color: $color-teal;
+    border-color: $color-teal;
+  }
+
+  :global(.form-check-label) {
+    color: inherit;
+  }
+}
+
+.consentText {
+  font-family: $font-sans;
+  font-size: .875rem;
+  line-height: $lh-relaxed;
+}
+
 .finePrint {
   font-family: $font-sans;
-  font-size: $fs-xs;
+  font-size: .875rem;
   line-height: $lh-normal;
-  color: rgba($color-white, 0.65);
+  color: rgba($color-white, 0.72);
+  margin: 0;
+}
+
+.inlineLink {
+  color: $color-white;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: $color-teal;
+  }
 }
 
 .message {

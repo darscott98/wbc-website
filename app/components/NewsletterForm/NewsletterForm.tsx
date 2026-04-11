@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import type { SubmitEvent } from 'react'
 import { useState } from 'react'
 import { Alert, Button, Col, Form, Row } from 'react-bootstrap'
@@ -10,13 +11,21 @@ type FormStatus = 'idle' | 'submitting' | 'success' | 'error'
 export default function NewsletterForm() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [consent, setConsent] = useState(false)
   const [status, setStatus] = useState<FormStatus>('idle')
   const [message, setMessage] = useState('')
 
   async function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault()
-    setStatus('submitting')
     setMessage('')
+
+    if (!consent) {
+      setStatus('error')
+      setMessage('Please confirm that you are happy to receive email updates before joining.')
+      return
+    }
+
+    setStatus('submitting')
 
     try {
       const response = await fetch('/api/subscribe', {
@@ -27,6 +36,7 @@ export default function NewsletterForm() {
         body: JSON.stringify({
           name,
           email,
+          consent,
         }),
       })
 
@@ -40,6 +50,7 @@ export default function NewsletterForm() {
       setMessage(data?.message || 'Thanks for joining our mailing list.')
       setName('')
       setEmail('')
+      setConsent(false)
     } catch (error) {
       setStatus('error')
       setMessage(
@@ -103,10 +114,37 @@ export default function NewsletterForm() {
             </Button>
           </Col>
         </Row>
+
+        <Form.Group className={styles.consentGroup} controlId="newsletter-consent">
+          <Form.Check
+            required
+            checked={consent}
+            onChange={(event) => setConsent(event.target.checked)}
+            className={styles.consentCheck}
+            label={
+              <span className={styles.consentText}>
+                I agree to receive occasional emails from Women Beyond Cancer about programme
+                updates, events, and related news. I understand I can unsubscribe at any time.
+              </span>
+            }
+          />
+        </Form.Group>
       </Form>
 
       <p className={styles.finePrint}>
-        We will only send occasional updates. You can unsubscribe at any time.
+        By joining, you confirm you have read our{' '}
+        <Link href="/privacy" className={styles.inlineLink}>
+          Privacy Policy
+        </Link>
+        ,{' '}
+        <Link href="/terms" className={styles.inlineLink}>
+          Terms of Use
+        </Link>
+        , and{' '}
+        <Link href="/cookies" className={styles.inlineLink}>
+          Cookie Policy
+        </Link>
+        .
       </p>
 
       {message ? (

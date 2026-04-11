@@ -6,6 +6,7 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 type SubscribeRequest = {
   email?: string
   name?: string
+  consent?: boolean
 }
 
 export async function POST(request: Request) {
@@ -39,10 +40,18 @@ export async function POST(request: Request) {
 
   const email = body.email?.trim().toLowerCase()
   const name = body.name?.trim()
+  const consent = body.consent === true
 
   if (!email || !EMAIL_PATTERN.test(email)) {
     return NextResponse.json(
       { error: 'Please enter a valid email address.' },
+      { status: 400 }
+    )
+  }
+
+  if (!consent) {
+    return NextResponse.json(
+      { error: 'Please confirm that you want to receive email updates before joining.' },
       { status: 400 }
     )
   }

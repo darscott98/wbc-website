@@ -1,0 +1,142 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.pageHeader {
+  background-color: $color-charcoal;
+  color: $color-white;
+  padding: $sp-20 0;
+  margin-top: $nav-height;
+
+  @include below('md') {
+    padding: calc($nav-height-mob + $sp-16) 0 $sp-16;
+  }
+}
+
+.headerInner {
+  @include container;
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-4;
+}
+
+.eyebrow {
+  @include label-text;
+  color: $color-teal;
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background-color: $color-teal;
+    border-radius: $r-full;
+    flex-shrink: 0;
+  }
+}
+
+.pageTitle {
+  font-family: $font-serif;
+  font-size: $fs-4xl;
+  font-weight: $fw-normal;
+  line-height: $lh-snug;
+  color: $color-white;
+
+  @include below('md') {
+    font-size: $fs-3xl;
+  }
+}
+
+.pageLead,
+.updated {
+  font-family: $font-sans;
+  line-height: $lh-relaxed;
+}
+
+.pageLead {
+  font-size: $fs-md;
+  color: rgba($color-white, 0.78);
+  max-width: 680px;
+}
+
+.updated {
+  font-size: $fs-sm;
+  color: rgba($color-white, 0.66);
+}
+
+.contentSection {
+  @include section-padding;
+  background-color: $color-off-white;
+}
+
+.contentInner {
+  @include container;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-6;
+}
+
+.card {
+  background-color: $color-white;
+  border: 1px solid rgba($color-charcoal, 0.08);
+  border-radius: $r-xl;
+  padding: $sp-8;
+  box-shadow: $shadow-xs;
+
+  @include below('md') {
+    padding: $sp-5;
+  }
+}
+
+.sectionTitle {
+  font-family: $font-display;
+  font-size: $fs-xl;
+  font-weight: $fw-semibold;
+  color: $color-charcoal;
+  margin-bottom: $sp-3;
+}
+
+.body {
+  font-family: $font-sans;
+  font-size: $fs-base;
+  line-height: $lh-relaxed;
+  color: $color-charcoal;
+  margin: 0 0 $sp-3;
+}
+
+.list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-2;
+  font-family: $font-sans;
+  font-size: $fs-base;
+  line-height: $lh-relaxed;
+  color: $color-charcoal;
+}
+
+.note {
+  background-color: $color-teal-light;
+  border-left: 4px solid $color-teal;
+  border-radius: $r-md;
+  padding: $sp-4 $sp-5;
+  font-family: $font-sans;
+  font-size: $fs-sm;
+  line-height: $lh-relaxed;
+  color: $color-charcoal;
+}
+
+.link {
+  color: $color-red;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: $color-red-dark;
+  }
+}
