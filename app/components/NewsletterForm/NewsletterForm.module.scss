@@ -1,0 +1,120 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.wrapper {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-4;
+  padding: $sp-6;
+  border-radius: $r-xl;
+  border: 1px solid rgba($color-white, 0.16);
+  background: rgba($color-white, 0.08);
+  backdrop-filter: blur(10px);
+  text-align: left;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-2;
+}
+
+.title {
+  font-family: $font-display;
+  font-size: $fs-xl;
+  font-weight: $fw-semibold;
+  color: $color-white;
+}
+
+.text {
+  font-family: $font-sans;
+  font-size: $fs-sm;
+  line-height: $lh-relaxed;
+  color: rgba($color-white, 0.78);
+}
+
+.form {
+  width: 100%;
+}
+
+.formRow {
+  --bs-gutter-x: #{$sp-3};
+  --bs-gutter-y: #{$sp-3};
+  align-items: end;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-family: $font-display;
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba($color-white, 0.72);
+  margin-bottom: $sp-2;
+}
+
+.input {
+  min-height: 50px;
+  border: 1px solid rgba($color-white, 0.22);
+  border-radius: $r-full;
+  background-color: rgba($color-white, 0.98);
+  color: $color-charcoal;
+  padding: 0 $sp-5;
+  font-family: $font-sans;
+  font-size: $fs-base;
+  transition: border-color $t-fast, box-shadow $t-fast;
+
+  &::placeholder {
+    color: rgba($color-charcoal, 0.55);
+  }
+
+  &:focus {
+    border-color: rgba($color-teal, 0.85);
+    box-shadow: 0 0 0 3px rgba($color-teal, 0.2);
+  }
+}
+
+.button {
+  @include btn-base;
+  width: 100%;
+  min-height: 50px;
+  padding: 0 $sp-8;
+  border-color: $color-teal;
+  background-color: $color-teal;
+  color: $color-charcoal;
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    background-color: $color-white;
+    border-color: $color-white;
+    color: $color-charcoal;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: wait;
+  }
+}
+
+.finePrint {
+  font-family: $font-sans;
+  font-size: $fs-xs;
+  line-height: $lh-normal;
+  color: rgba($color-white, 0.65);
+}
+
+.message {
+  margin: 0;
+  border: none;
+  font-family: $font-display;
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+}
+

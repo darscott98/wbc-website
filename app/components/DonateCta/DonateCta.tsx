@@ -1,3 +1,4 @@
+import NewsletterForm from '../NewsletterForm/NewsletterForm'
 import styles from './DonateCta.module.scss'
 
 export default function DonateCta() {
@@ -16,6 +17,7 @@ export default function DonateCta() {
           who need community, guidance, and hope. Together, we can ensure no woman
           faces this journey alone.
         </p>
+        <NewsletterForm />
         <div className={styles.actions}>
           <a href="#" className={styles.btnDonate}>
             Donate Now

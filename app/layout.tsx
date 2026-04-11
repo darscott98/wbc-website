@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Prata, Red_Hat_Text, Red_Hat_Display } from 'next/font/google'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import './globals.scss'
