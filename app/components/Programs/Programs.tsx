@@ -2,39 +2,39 @@ import styles from './Programs.module.scss'
 
 const programs = [
   {
-    tag: 'Support',
-    title: 'Peer Connection Groups',
+    tag: 'Weekly',
+    title: 'Guided Journaling Sessions',
     description:
-      'Monthly gatherings — in person and online — where women share their experiences, fears, and triumphs in a safe, confidential space. Led by trained facilitators who truly understand.',
-    cta: 'Join a Group',
-    href: '#contact',
+      'A thoughtfully structured programme that builds week on week throughout the year. We begin with the foundations and gradually deepen your reflection as your confidence grows. No experience required — only a willingness to show up.',
+    cta: 'Join the Waitlist',
+    href: '#waitlist',
     accent: 'teal',
   },
   {
-    tag: 'Wellness',
-    title: 'Wellbeing Programmes',
+    tag: 'Fortnightly',
+    title: 'Peer Support Groups',
     description:
-      'From yoga and mindfulness to nutrition workshops and creative therapies, our holistic programmes are designed around the specific needs of women at every stage of their journey.',
-    cta: 'Explore Programmes',
-    href: '#contact',
+      'Connect with women who truly understand — no background explaining, no managing other people\'s discomfort, just honest conversation with others who get it.',
+    cta: 'Join the Waitlist',
+    href: '#waitlist',
     accent: 'red',
   },
   {
-    tag: 'Resources',
-    title: 'Information & Guidance',
+    tag: 'Quarterly',
+    title: 'Forest Bathing & Mindful Walking',
     description:
-      'Navigating cancer treatment and life after is complex. Our resource hub offers clear, practical information alongside one-to-one guidance sessions with specialist advisors.',
-    cta: 'Access Resources',
-    href: '#contact',
+      'In-person sessions in Swansea\'s green spaces, guided by a certified forest bathing practitioner. Each session offers a quiet, unhurried invitation back into your senses, your body, and the present moment.',
+    cta: 'Join the Waitlist',
+    href: '#waitlist',
     accent: 'teal',
   },
   {
-    tag: 'Events',
-    title: 'Community Events',
+    tag: 'Annual',
+    title: 'Day Retreat',
     description:
-      'Retreats, fundraising walks, celebration dinners, and more. Our events calendar is filled with opportunities to connect, laugh, and remind yourself that joy is always possible.',
-    cta: 'View Events',
-    href: '#events',
+      'A day to go deeper — bringing together forest bathing, creative journaling, and mindfulness in a nurturing, restorative space. A day entirely for you.',
+    cta: 'Join the Waitlist',
+    href: '#waitlist',
     accent: 'red',
   },
 ]
@@ -44,15 +44,15 @@ export default function Programs() {
     <section className={styles.section} id="programs">
       <div className={styles.inner}>
         <div className={styles.header}>
-          <p className={styles.eyebrow}>What We Do</p>
+          <p className={styles.eyebrow}>What We Offer</p>
           <h2 className={styles.heading}>
-            Support that meets you<br />
-            <span className={styles.headingAccent}>wherever you are</span>
+            Four interwoven<br />
+            <span className={styles.headingAccent}>threads of support</span>
           </h2>
           <p className={styles.sub}>
-            Every woman&apos;s journey is different. Our programmes are built
-            to support you at every stage — from diagnosis through treatment
-            and into life beyond.
+            A thoughtfully structured programme, building week on week
+            throughout the year — for women who have completed active
+            cancer treatment.
           </p>
         </div>
 

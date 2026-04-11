@@ -3,21 +3,12 @@ import styles from './Footer.module.scss'
 
 const navGroups = [
   {
-    title: 'Organisation',
+    title: 'Programme',
     links: [
-      { href: '#about', label: 'About Us' },
-      { href: '#programs', label: 'What We Do' },
-      { href: '#impact', label: 'Our Impact' },
-      { href: '#stories', label: 'Stories' },
-    ],
-  },
-  {
-    title: 'Get Involved',
-    links: [
-      { href: '#donate', label: 'Donate' },
-      { href: '#events', label: 'Events' },
-      { href: '#contact', label: 'Volunteer' },
-      { href: '#contact', label: 'Fundraise' },
+      { href: '/about',         label: 'About Rebecca' },
+      { href: '/#programs',     label: 'What We Offer' },
+      { href: '/why-it-works',  label: 'Why It Works' },
+      { href: '/#waitlist',     label: 'Join the Waitlist' },
     ],
   },
   {
@@ -42,10 +33,10 @@ export default function Footer() {
             <span className={styles.logoFull}>Women Beyond Cancer</span>
           </Link>
           <p className={styles.tagline}>
-            Supporting women through and beyond cancer
-            with community, compassion, and hope.
+            A community for women navigating life after cancer —
+            built on lived experience and evidence.
           </p>
-          <p className={styles.charity}>Registered Charity · England &amp; Wales</p>
+          <p className={styles.charity}>Funded by the National Lottery Community Fund Wales</p>
         </div>
 
         <nav className={styles.linkGroups} aria-label="Footer navigation">

@@ -71,23 +71,19 @@
   margin-top: $sp-2;
 }
 
-// ─── Right – Stats grid ───────────────────────────────────────
+// ─── Right – Evidence cards ───────────────────────────────────
 .right {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: $sp-1;
-
-  @include below('sm') {
-    grid-template-columns: 1fr;
-  }
 }
 
 .stat {
-  padding: $sp-10 $sp-8;
+  padding: $sp-8;
   border-radius: $r-lg;
   display: flex;
   flex-direction: column;
-  gap: $sp-2;
+  gap: $sp-3;
   background-color: rgba($color-white, 0.04);
   transition: background-color $t-base;
 
@@ -96,27 +92,25 @@
   }
 }
 
-.color_red .statNum { color: $color-red; }
-.color_teal .statNum { color: $color-teal; }
+.color_red .findingQuote { color: rgba($color-white, 0.9); }
+.color_red .findingSource { color: $color-red; }
+.color_teal .findingQuote { color: rgba($color-white, 0.9); }
+.color_teal .findingSource { color: $color-teal; }
 
-.statNum {
-  font-family: $font-serif;
-  font-size: $fs-5xl;
-  font-weight: $fw-normal;
-  line-height: 1;
-
-  @include below('xl') { font-size: $fs-4xl; }
-  @include below('md') { font-size: $fs-3xl; }
-}
-
-.suffix {
-  font-size: 0.6em;
-  vertical-align: super;
-}
-
-.statLabel {
+.findingQuote {
   font-family: $font-sans;
   font-size: $fs-sm;
+  line-height: $lh-relaxed;
+  font-style: italic;
+  color: rgba($color-white, 0.85);
+  margin: 0;
+}
+
+.findingSource {
+  font-family: $font-sans;
+  font-size: $fs-xs;
   line-height: $lh-normal;
-  color: rgba($color-white, 0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: $fw-medium;
 }

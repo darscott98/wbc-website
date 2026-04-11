@@ -103,25 +103,12 @@
   font-size: $fs-base;
 }
 
-// ─── Trust signals ────────────────────────────────────────────
-.trust {
-  display: flex;
-  align-items: center;
-  gap: $sp-8;
-  margin-top: $sp-4;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  @include below('sm') { gap: $sp-5; }
-}
-
-.trustItem {
-  display: flex;
-  align-items: center;
-  gap: $sp-2;
-  font-family: $font-display;
-  font-size: $fs-xs;
-  font-weight: $fw-medium;
-  color: rgba($color-white, 0.65);
-  letter-spacing: 0.02em;
+// ─── Fine print ───────────────────────────────────────────────
+.finePrint {
+  font-family: $font-sans;
+  font-size: $fs-sm;
+  line-height: $lh-normal;
+  color: rgba($color-white, 0.6);
+  max-width: 460px;
+  text-align: center;
 }

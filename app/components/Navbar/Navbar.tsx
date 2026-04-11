@@ -5,9 +5,9 @@ import Link from 'next/link'
 import styles from './Navbar.module.scss'
 
 const navLinks = [
-  { href: '#about',     label: 'About' },
-  { href: '#programs',  label: 'What We Do' },
-  { href: '#impact',    label: 'Our Impact' },
+  { href: '/about',         label: 'About' },
+  { href: '/#programs',     label: 'What We Offer' },
+  { href: '/why-it-works',  label: 'Why It Works' },
 ]
 
 export default function Navbar() {
@@ -38,14 +38,14 @@ export default function Navbar() {
         <ul className={styles.links}>
           {navLinks.map(({ href, label }) => (
             <li key={href}>
-              <a href={href} className={styles.link}>{label}</a>
+              <Link href={href} className={styles.link}>{label}</Link>
             </li>
           ))}
         </ul>
 
         {/* Desktop CTA */}
-        <a href="#donate" className={styles.donateCta}>
-          Donate
+        <a href="/#waitlist" className={styles.donateCta}>
+          Join Waitlist
         </a>
 
         {/* Mobile hamburger */}
@@ -66,18 +66,18 @@ export default function Navbar() {
         <ul className={styles.drawerLinks}>
           {navLinks.map(({ href, label }) => (
             <li key={href}>
-              <a
+              <Link
                 href={href}
                 className={styles.drawerLink}
                 onClick={() => setMenuOpen(false)}
               >
                 {label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
-        <a href="#donate" className={styles.drawerCta} onClick={() => setMenuOpen(false)}>
-          Donate Now
+        <a href="/#waitlist" className={styles.drawerCta} onClick={() => setMenuOpen(false)}>
+          Join the Waitlist
         </a>
       </div>
     </header>

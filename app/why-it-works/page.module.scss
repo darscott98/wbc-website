@@ -1,0 +1,213 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+// ─── Page Header ─────────────────────────────────────────────
+.pageHeader {
+  background-color: $color-charcoal;
+  color: $color-white;
+  padding: calc($nav-height + $sp-20) 0 $sp-20;
+
+  @include below('md') {
+    padding: calc($nav-height-mob + $sp-16) 0 $sp-16;
+  }
+}
+
+.headerInner {
+  @include container;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-6;
+}
+
+.eyebrow {
+  @include label-text;
+  color: $color-teal;
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background-color: $color-teal;
+    border-radius: $r-full;
+    flex-shrink: 0;
+  }
+}
+
+.pageTitle {
+  font-family: $font-serif;
+  font-size: $fs-5xl;
+  font-weight: $fw-normal;
+  line-height: $lh-snug;
+  color: $color-white;
+
+  @include below('lg') { font-size: $fs-4xl; }
+  @include below('md') { font-size: $fs-3xl; }
+  @include below('sm') { font-size: $fs-2xl; }
+}
+
+.pageLead {
+  font-family: $font-sans;
+  font-size: $fs-md;
+  line-height: $lh-relaxed;
+  color: rgba($color-white, 0.7);
+  max-width: 640px;
+}
+
+// ─── Shared section styles ────────────────────────────────────
+.section {
+  @include section-padding;
+}
+
+.sectionAlt {
+  @include section-padding;
+  background-color: $color-off-white;
+}
+
+.inner {
+  @include container;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-8;
+}
+
+.sectionLabel {
+  @include label-text;
+  color: $color-teal;
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background-color: $color-teal;
+    border-radius: $r-full;
+    flex-shrink: 0;
+  }
+}
+
+.sectionLabelRed {
+  @include label-text;
+  color: $color-red;
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background-color: $color-red;
+    border-radius: $r-full;
+    flex-shrink: 0;
+  }
+}
+
+.sectionHeading {
+  font-family: $font-serif;
+  font-size: $fs-3xl;
+  font-weight: $fw-normal;
+  line-height: $lh-snug;
+  color: $color-charcoal;
+
+  @include below('md') { font-size: $fs-2xl; }
+}
+
+.sectionBody {
+  font-family: $font-sans;
+  font-size: $fs-base;
+  line-height: $lh-relaxed;
+  color: $color-gray;
+}
+
+// ─── Stats / highlights ───────────────────────────────────────
+.statHighlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $sp-4;
+
+  @include below('sm') {
+    grid-template-columns: 1fr;
+  }
+}
+
+.statCard {
+  padding: $sp-8;
+  background-color: $color-white;
+  border-radius: $r-lg;
+  border-left: 3px solid $color-red;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-2;
+}
+
+.statFigure {
+  font-family: $font-serif;
+  font-size: $fs-3xl;
+  font-weight: $fw-normal;
+  color: $color-red;
+  line-height: 1;
+
+  @include below('md') { font-size: $fs-2xl; }
+}
+
+.statDesc {
+  font-family: $font-sans;
+  font-size: $fs-sm;
+  line-height: $lh-relaxed;
+  color: $color-gray;
+}
+
+// ─── Closing note ─────────────────────────────────────────────
+.noteSection {
+  @include section-padding;
+  background-color: $color-charcoal;
+  color: $color-white;
+}
+
+.noteInner {
+  @include container;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-6;
+  align-items: flex-start;
+}
+
+.noteHeading {
+  font-family: $font-serif;
+  font-size: $fs-2xl;
+  font-weight: $fw-normal;
+  color: $color-white;
+
+  @include below('md') { font-size: $fs-xl; }
+}
+
+.noteBody {
+  font-family: $font-sans;
+  font-size: $fs-base;
+  line-height: $lh-relaxed;
+  color: rgba($color-white, 0.7);
+}
+
+.noteCta {
+  @include btn-primary;
+  background-color: $color-teal;
+  border-color: $color-teal;
+  color: $color-charcoal;
+  padding: $sp-4 $sp-8;
+
+  &:hover {
+    background-color: $color-teal-dark;
+    border-color: $color-teal-dark;
+  }
+}
