@@ -30,11 +30,14 @@ export default function Mission() {
           </div>
           <div className={styles.pillar}>
             <div className={styles.pillarIcon} aria-hidden="true">
-              {/* Leaf / nature icon */}
+              {/* Tree icon */}
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M17 8C8 10 5.9 16.17 3.82 22" />
-                <path d="M21 3c-9 1-13 8-11 17" />
-                <path d="M21 3C9 3 5 10 3 22" />
+                {/* Crown */}
+                <circle cx="12" cy="8" r="6" />
+                {/* Trunk */}
+                <line x1="12" y1="14" x2="12" y2="21" />
+                {/* Ground */}
+                <line x1="9" y1="21" x2="15" y2="21" />
               </svg>
             </div>
             <h3 className={styles.pillarTitle}>Nature</h3>

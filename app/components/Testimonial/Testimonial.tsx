@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
     quote:
-      "The wellbeing programme changed how I see my body. It helped me move from fear to gratitude. I came for the yoga and stayed because of the community I found.",
+      "The journaling sessions gave me a language for things I hadn't been able to say out loud. I came not knowing what to expect and found something that changed how I understand myself.",
     name: 'Rachel T.',
     detail: 'Ovarian cancer survivor, member since 2020',
     initials: 'RT',

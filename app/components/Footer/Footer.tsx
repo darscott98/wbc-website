@@ -29,8 +29,11 @@ export default function Footer() {
       <div className={styles.top}>
         <div className={styles.brand}>
           <Link href="/" className={styles.logo}>
-            <span className={styles.logoWBC}>WBC</span>
-            <span className={styles.logoFull}>Women Beyond Cancer</span>
+            <img
+              src="/logos/wbc-long-plain.png"
+              alt="Women Beyond Cancer logo"
+              className={styles.logoImage}
+            />
           </Link>
           <p className={styles.tagline}>
             A community for women navigating life after cancer —

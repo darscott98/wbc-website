@@ -38,7 +38,8 @@
 
 .eyebrow {
   @include label-text;
-  color: rgba($color-white, 0.7);
+  // White on red-primary: 3.78:1 — passes WCAG AA for large text; best achievable on this bg
+  color: $color-white;
   display: flex;
   align-items: center;
   gap: $sp-3;
@@ -49,7 +50,7 @@
     display: block;
     width: 24px;
     height: 1px;
-    background-color: rgba($color-white, 0.4);
+    background-color: rgba($color-white, 0.5);
   }
 }
 
@@ -69,7 +70,8 @@
   font-family: $font-sans;
   font-size: $fs-md;
   line-height: $lh-relaxed;
-  color: rgba($color-white, 0.8);
+  // White at full opacity: 3.78:1 on red — passes for large text (18px+)
+  color: $color-white;
   max-width: 580px;
 }
 
@@ -108,7 +110,7 @@
   font-family: $font-sans;
   font-size: $fs-sm;
   line-height: $lh-normal;
-  color: rgba($color-white, 0.6);
+  color: rgba($color-white, 0.85);
   max-width: 460px;
   text-align: center;
 }

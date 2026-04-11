@@ -9,6 +9,10 @@
   z-index: 200;
   transition: background-color $t-slow, box-shadow $t-slow;
 
+  img {
+    max-height: 15px;
+  }
+
   // Transparent over hero
   background-color: transparent;
 

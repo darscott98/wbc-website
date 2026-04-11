@@ -60,16 +60,24 @@
   @include container;
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: $sp-16;
-  padding-top: $sp-16;
-  padding-bottom: $sp-16;
+  padding-top: $sp-20;
+  padding-bottom: $sp-20;
 
   @include below('md') {
-    gap: $sp-12;
-    padding-top: $sp-10;
-    padding-bottom: $sp-10;
+    padding-top: $sp-12;
+    padding-bottom: $sp-12;
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 460px);
+  align-items: center;
+  gap: $sp-20;
+
+  @include below('lg') {
+    grid-template-columns: 1fr;
+    gap: $sp-8;
   }
 }
 
@@ -81,27 +89,9 @@
   gap: $sp-6;
 }
 
-.eyebrow {
-  @include label-text;
-  color: $color-teal-dark;
-  display: flex;
-  align-items: center;
-  gap: $sp-3;
-
-  &::before {
-    content: '';
-    display: inline-block;
-    width: 28px;
-    height: 2px;
-    background-color: $color-teal;
-    border-radius: $r-full;
-    flex-shrink: 0;
-  }
-}
-
 .heading {
   @include display-heading;
-  font-size: $fs-6xl;
+  font-size: $fs-5xl;
 
   @include below('xl') { font-size: $fs-5xl; }
   @include below('lg') { font-size: $fs-4xl; }
@@ -118,8 +108,9 @@
   font-family: $font-sans;
   font-size: $fs-md;
   line-height: $lh-relaxed;
-  color: $color-gray;
-  max-width: 560px;
+  // #4F5563: 7.1:1 on off-white — WCAG AAA. Gray #7B808A = 3.78:1 fails AA.
+  color: #4F5563;
+  max-width: 600px;
 }
 
 // ─── Actions ─────────────────────────────────────────────────
@@ -143,110 +134,41 @@
   font-size: $fs-base;
 }
 
-// ─── Stats bar ────────────────────────────────────────────────
-.stats {
+.visual {
   display: flex;
-  align-items: center;
-  gap: $sp-10;
-  background-color: $color-white;
-  border: 1px solid $color-gray-light;
-  border-radius: $r-xl;
-  padding: $sp-8 $sp-10;
-  width: fit-content;
-  box-shadow: $shadow-sm;
+  justify-content: center;
 
-  @include below('md') {
-    gap: $sp-6;
-    padding: $sp-6 $sp-8;
-  }
-
-  @include below('sm') {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: $sp-6;
-    width: 100%;
+  @include below('lg') {
+    order: -1;
   }
 }
 
-.statCard {
+.imagePlaceholder {
+  width: 100%;
+  max-width: 460px;
   display: flex;
   flex-direction: column;
-  gap: $sp-1;
+  gap: $sp-3;
 }
 
-.statNum {
-  font-family: $font-serif;
-  font-size: $fs-3xl;
-  font-weight: $fw-normal;
-  color: $color-charcoal;
-  line-height: 1;
-
-  @include below('md') { font-size: $fs-2xl; }
+.placeholderBadge {
+  @include label-text;
+  color: $color-teal-dark;
 }
 
-.statPlus {
-  color: $color-red;
+.placeholderFrame {
+  aspect-ratio: 4 / 5;
+  border-radius: $r-2xl;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.statLabel {
+.placeholderText {
   font-family: $font-display;
-  font-size: $fs-xs;
-  font-weight: $fw-medium;
-  color: $color-gray;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: $fs-lg;
+  font-weight: $fw-semibold;
+  color: $color-charcoal;
 }
 
-.statDivider {
-  width: 1px;
-  height: 48px;
-  background-color: $color-gray-light;
-  flex-shrink: 0;
-
-  @include below('sm') {
-    width: 40px;
-    height: 1px;
-  }
-}
-
-// ─── Scroll hint ──────────────────────────────────────────────
-.scrollHint {
-  position: absolute;
-  bottom: $sp-8;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-
-  span {
-    display: block;
-    width: 24px;
-    height: 40px;
-    border: 2px solid rgba($color-charcoal, 0.25);
-    border-radius: $r-full;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 6px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 4px;
-      height: 8px;
-      background-color: $color-red;
-      border-radius: $r-full;
-      animation: scrollDot 1.8s ease-in-out infinite;
-    }
-  }
-
-  @include below('md') {
-    display: none;
-  }
-}
-
-@keyframes scrollDot {
-  0%   { top: 6px; opacity: 1; }
-  60%  { top: 20px; opacity: 0.3; }
-  61%  { top: 6px; opacity: 0; }
-  100% { top: 6px; opacity: 1; }
-}

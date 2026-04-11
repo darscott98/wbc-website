@@ -22,7 +22,7 @@
 
 .eyebrow {
   @include label-text;
-  color: $color-teal-dark;
+  color: $color-charcoal;
   display: flex;
   align-items: center;
   gap: $sp-3;
@@ -103,7 +103,7 @@
   height: 44px;
   border-radius: $r-full;
   background-color: $color-red-light;
-  color: $color-red;
+  color: $color-red-dark;
   @include flex-center;
   font-family: $font-display;
   font-size: $fs-xs;

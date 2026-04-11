@@ -5,7 +5,8 @@
 .pageHeader {
   background-color: $color-charcoal;
   color: $color-white;
-  padding: calc($nav-height + $sp-20) 0 $sp-20;
+  padding: $sp-20 0 $sp-20;
+  margin-top: $nav-height;
 
   @include below('md') {
     padding: calc($nav-height-mob + $sp-16) 0 $sp-16;
@@ -78,7 +79,8 @@
 
 .sectionLabel {
   @include label-text;
-  color: $color-teal;
+  // Charcoal: 7:1+ on white. Teal (#36D1B5) = 1.9:1 — fails WCAG.
+  color: $color-charcoal;
   display: flex;
   align-items: center;
   gap: $sp-3;
@@ -96,7 +98,8 @@
 
 .sectionLabelRed {
   @include label-text;
-  color: $color-red;
+  // Charcoal: 7:1+ on white. Red (#F33D3C) = 3.78:1 — fails AA for 12px.
+  color: $color-charcoal;
   display: flex;
   align-items: center;
   gap: $sp-3;

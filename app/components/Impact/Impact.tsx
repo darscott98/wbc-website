@@ -5,17 +5,14 @@ const findings = [
   {
     quote: 'Structured expressive writing produces measurable improvements in psychological wellbeing and post-traumatic growth in cancer survivors.',
     source: 'Systematic review, 2025',
-    color: 'red',
   },
   {
     quote: 'Forest bathing reduces cortisol, increases serotonin and oxytocin, and reduces depression scores — effects lasting at least one week after a single session.',
     source: 'Clinical study, 2024',
-    color: 'teal',
   },
   {
     quote: 'Peer connection produces significant improvements in resilience, quality of life, and reductions in anxiety and fear of recurrence.',
     source: 'Review of peer support for cancer survivors, 2023',
-    color: 'red',
   },
 ]
 
@@ -40,8 +37,8 @@ export default function Impact() {
         </div>
 
         <div className={styles.right}>
-          {findings.map(({ quote, source, color }) => (
-            <div key={source} className={`${styles.stat} ${styles[`color_${color}`]}`}>
+          {findings.map(({ quote, source }) => (
+            <div key={source} className={styles.stat}>
               <p className={styles.findingQuote}>&ldquo;{quote}&rdquo;</p>
               <span className={styles.findingSource}>{source}</span>
             </div>

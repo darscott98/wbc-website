@@ -31,7 +31,11 @@ export default function Navbar() {
       <nav className={styles.nav}>
         {/* Logo */}
         <Link href="/" className={styles.logo} onClick={() => setMenuOpen(false)}>
-          <span className={styles.logoFull}>Women Beyond Cancer</span>
+          <img 
+            src="/logos/wbc-long-plain-red.png" 
+            alt="Women Beyond Cancer logo" 
+            className={styles.logoImage} 
+          />
         </Link>
 
         {/* Desktop links */}

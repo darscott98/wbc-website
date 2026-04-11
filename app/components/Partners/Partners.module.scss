@@ -1,0 +1,67 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.section {
+  padding: $sp-12 0;
+  background-color: $color-white;
+  border-top: 1px solid $color-gray-light;
+  border-bottom: 1px solid $color-gray-light;
+}
+
+.inner {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $sp-8;
+}
+
+.label {
+  @include label-text;
+  color: $color-charcoal;
+  display: flex;
+  align-items: center;
+  gap: $sp-3;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background-color: $color-gray-light;
+  }
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $sp-12;
+  flex-wrap: wrap;
+
+  @include below('md') {
+    gap: $sp-8;
+  }
+
+  @include below('sm') {
+    gap: $sp-6;
+    flex-direction: column;
+  }
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  transition: opacity $t-base;
+
+  img {
+    max-height: 50px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

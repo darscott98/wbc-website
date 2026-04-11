@@ -23,7 +23,7 @@
 
 .eyebrow {
   @include label-text;
-  color: $color-teal-dark;
+  color: $color-charcoal;
   display: flex;
   align-items: center;
   gap: $sp-3;
@@ -91,15 +91,17 @@
     border-color: $color-teal;
   }
 
+  // Tag: charcoal text on teal-light bg — teal-dark fails contrast on teal-light
   .tag {
     background-color: $color-teal-light;
-    color: $color-teal-dark;
+    color: $color-charcoal;
   }
 
+  // CTA: charcoal default; teal-dark (#28a892) = 2.9:1 on white which fails AA
   .cardCta {
-    color: $color-teal-dark;
+    color: $color-charcoal;
 
-    &:hover { color: $color-teal; }
+    &:hover { color: $color-teal-dark; }
   }
 }
 
@@ -108,13 +110,15 @@
     border-color: $color-red;
   }
 
+  // Tag: charcoal text on red-light bg — red on red-light fails contrast
   .tag {
     background-color: $color-red-light;
-    color: $color-red;
+    color: $color-charcoal;
   }
 
+  // CTA: charcoal default; red (#F33D3C) = 3.78:1 on white, fails AA for 14px text
   .cardCta {
-    color: $color-red;
+    color: $color-charcoal;
 
     &:hover { color: $color-red-dark; }
   }
