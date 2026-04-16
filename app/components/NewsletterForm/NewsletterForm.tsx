@@ -65,9 +65,6 @@ export default function NewsletterForm() {
     <div className={styles.wrapper}>
       <div className={styles.copy}>
         <h3 className={styles.title}>Join our mailing list</h3>
-        <p className={styles.text}>
-          Get updates on support events, inspiring stories, and ways to help women beyond cancer.
-        </p>
       </div>
 
       <Form className={styles.form} noValidate onSubmit={handleSubmit}>

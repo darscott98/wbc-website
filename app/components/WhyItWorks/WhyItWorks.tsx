@@ -12,7 +12,7 @@ export default function WhyItWorks() {
           </h1>
           <p className={styles.pageLead}>
             Because the evidence points here. Each element of the Women Beyond Cancer programme
-            is grounded in published research — and the combination is more than the sum of its parts.
+            is grounded in published research. 
           </p>
         </div>
       </header>

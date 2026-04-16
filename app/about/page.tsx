@@ -87,11 +87,6 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <p className={styles.sectionBody}>
-            This combination is not accidental. It is the result of Rebecca asking, after
-            her own experience, what she had actually needed — and then dedicating herself
-            to making that available to others.
-          </p>
         </div>
       </section>
 
@@ -115,8 +110,7 @@ export default function AboutPage() {
             never be the thing that stands between a woman and her own recovery.
           </p>
           <p className={styles.sectionBody}>
-            Women Beyond Cancer is small, intentional, and deeply personal. That is by
-            design. Rebecca leads every session herself — the journaling, the forest
+            Rebecca leads every session herself — the journaling, the forest
             bathing, the peer spaces — bringing the same presence and care to each that
             she wishes someone had brought to her.
           </p>

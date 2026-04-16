@@ -28,8 +28,7 @@ export default function Impact() {
           </h2>
           <p className={styles.body}>
             The programme is built on three interlocking approaches, each
-            supported by a substantial body of research. The combination is
-            more than the sum of its parts.
+            supported by a substantial body of research. Each approach building on the others.
           </p>
           <Link href="/why-it-works" className={styles.cta}>
             Read the full evidence

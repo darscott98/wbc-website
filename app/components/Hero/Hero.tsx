@@ -40,8 +40,8 @@ export default function Hero() {
             <div className={styles.imagePlaceholder}>
               <div className={styles.placeholderFrame}>
                 <img
-                  src="/images/Group 634450.png"
-                  alt="Illustration of a woman sitting with a cup of tea, looking out a window"
+                  src="/images/OurBeautifulAdventure-BrandingShoot-Perkins-0278.jpg"
+                  alt="Photograph of a woman wearing a colorful geometric dress on a beach in Wales launching."
                   className={styles.heroImage}
                 />
               </div>

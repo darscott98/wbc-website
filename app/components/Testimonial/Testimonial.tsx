@@ -3,24 +3,21 @@ import styles from './Testimonial.module.scss'
 const testimonials = [
   {
     quote:
-      "WBC gave me something no treatment could — a room full of women who simply understood. I didn't need to explain myself. For the first time in two years, I felt genuinely seen.",
-    name: 'Sarah M.',
-    detail: 'Breast cancer survivor, member since 2021',
-    initials: 'SM',
+      "With Rebecca’s gentle guidance, journaling has become a creative, grounding practice I now return to with ease. ",
+    name: 'Rachel',
+    initials: 'R',
   },
   {
     quote:
-      "The journaling sessions gave me a language for things I hadn't been able to say out loud. I came not knowing what to expect and found something that changed how I understand myself.",
-    name: 'Rachel T.',
-    detail: 'Ovarian cancer survivor, member since 2020',
-    initials: 'RT',
+      "Rebecca is a warm, gentle and positive soul. I felt totally at ease from the moment we met until the end of the day.",
+    name: 'Donna',
+    initials: 'D',
   },
   {
     quote:
-      "I was terrified after finishing treatment — the support structure disappears overnight. WBC was there when I needed it most, and they continue to be part of my life today.",
-    name: 'Caroline H.',
-    detail: 'Cervical cancer survivor, member since 2022',
-    initials: 'CH',
+      "Rebecca is an amazing forest bathing guide. Her calming presence and extensive knowledge put me at my ease and I trusted her completely to guide us through the forest.",
+    name: 'Bea',
+    initials: 'B',
   },
 ]
 
@@ -46,7 +43,6 @@ export default function Testimonial() {
                 </div>
                 <div>
                   <p className={styles.name}>{t.name}</p>
-                  <p className={styles.detail}>{t.detail}</p>
                 </div>
               </figcaption>
             </figure>

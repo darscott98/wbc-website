@@ -25,7 +25,7 @@ export default function Mission() {
             <h3 className={styles.pillarTitle}>Journaling</h3>
             <p className={styles.pillarText}>
               Guided, progressive journaling that helps you process what has
-              happened and begin to author what comes next.
+              happened and begin to explore what comes next.
             </p>
           </div>
           <div className={styles.pillar}>
@@ -43,7 +43,7 @@ export default function Mission() {
             <h3 className={styles.pillarTitle}>Nature</h3>
             <p className={styles.pillarText}>
               Quarterly forest bathing in Swansea&apos;s green spaces — a
-              clinically-informed return to your senses, your body, and the
+              return to your senses, your body, and the
               present moment.
             </p>
           </div>

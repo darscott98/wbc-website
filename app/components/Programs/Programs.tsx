@@ -5,7 +5,7 @@ const programs = [
     tag: 'Weekly',
     title: 'Guided Journaling Sessions',
     description:
-      'A thoughtfully structured programme that builds week on week throughout the year. We begin with the foundations and gradually deepen your reflection as your confidence grows. No experience required — only a willingness to show up.',
+      'We begin with the foundations and gradually deepen your reflection as your confidence grows. No experience required — only a willingness to show up.',
     cta: 'Join the Waitlist',
     href: '#waitlist',
     accent: 'teal',
@@ -14,7 +14,7 @@ const programs = [
     tag: 'Fortnightly',
     title: 'Peer Support Groups',
     description:
-      'Connect with women who truly understand — no background explaining, no managing other people\'s discomfort, just honest conversation with others who get it.',
+      'Honest conversation with others who "get it" — no managing other people\'s discomfort, show up just as you are.',
     cta: 'Join the Waitlist',
     href: '#waitlist',
     accent: 'red',
