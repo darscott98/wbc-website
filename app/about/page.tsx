@@ -82,8 +82,7 @@ export default function AboutPage() {
               <div className={styles.credentialDot} />
               <h3 className={styles.credentialTitle}>NLP Coach</h3>
               <p className={styles.credentialText}>
-                Provides tools to help women notice the thought patterns and self-narratives
-                shaped by illness — and begin, gently, to rewrite them.
+                NLP Coach Grounded in the understanding that cancer and its treatment reshape not just our bodies, but our inner narratives. Provides practical tools to help women notice unhelpful thought patterns and begin to consciously author new stories about themselves and their futures.
               </p>
             </div>
           </div>
@@ -104,10 +103,7 @@ export default function AboutPage() {
             proper community, and proper space to unfold.
           </p>
           <p className={styles.sectionBody}>
-            She is committed to making that support accessible. Through the partnership
-            with the National Lottery Community Fund Wales, the programme is offered
-            completely free to women in Wales — because financial circumstances should
-            never be the thing that stands between a woman and her own recovery.
+            She is committed to making core support accessible to all women. Her aspiration is that cost should never stand between a woman and access to peer community, guided journaling, and nature-based healing—the essentials of recovery. Through the partnership with the National Lottery Community Fund Wales, the programme is offered completely free to women in Wales, a step towards that vision
           </p>
           <p className={styles.sectionBody}>
             Rebecca leads every session herself — the journaling, the forest

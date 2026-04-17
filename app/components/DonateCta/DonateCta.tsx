@@ -13,9 +13,9 @@ export default function DonateCta() {
           Join the Women Beyond<br />Cancer Programme
         </h2>
         <p className={styles.body}>
-          Funded by the National Lottery Community Fund Wales — completely
-          free for women living in Wales. Add your name to the waitlist
-          and we&apos;ll be in touch with everything you need to know.
+          We're thrilled to have secured funding from the National Lottery Community Fund Wales—which means women in Wales can access this programme completely free.
+          <br/>
+          But this programme is for everyone. Whether you're in Wales or beyond, add your name to the waitlist and we'll be in touch with everything you need to know about joining.
         </p>
         <NewsletterForm />
         <p className={styles.finePrint}>
