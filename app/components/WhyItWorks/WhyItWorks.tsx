@@ -6,14 +6,22 @@ export default function WhyItWorks() {
       {/* ─── Page Header ──────────────────────────────────────── */}
       <header className={styles.pageHeader}>
         <div className={styles.headerInner}>
-          <p className={styles.eyebrow}>The Evidence</p>
-          <h1 className={styles.pageTitle}>
-            Why journaling, nature,<br />and community?
-          </h1>
-          <p className={styles.pageLead}>
-            Because the evidence points here. Each element of the Women Beyond Cancer programme
-            is grounded in published research. 
-          </p>
+          <div className={styles.headerContent}>
+            <p className={styles.eyebrow}>The Evidence</p>
+            <h1 className={styles.pageTitle}>
+              Why journaling, nature, and community?
+            </h1>
+            <p className={styles.pageLead}>
+              Because the evidence points here. Each element of the Women Beyond Cancer programme
+              is grounded in published research.
+            </p>
+          </div>
+          <div className={styles.headerImage}>
+            <img
+              src="/images/OurBeautifulAdventure-BrandingShoot-Perkins-0206.jpg"
+              alt="Rebecca Perkins in nature"
+            />
+          </div>
         </div>
       </header>
 

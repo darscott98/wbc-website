@@ -11,7 +11,7 @@ export default function Mission() {
           &ldquo;Women Beyond Cancer is a warm, purposeful community for women
           who have completed active cancer treatment. It weaves together three
           things that research consistently shows matter in recovery:{' '}
-          <em className={styles.highlight}>guided journaling, time in nature, and peer community.</em>&rdquo;
+          <em className={styles.highlight}>guided journaling, time in nature, and peer community.&rdquo;</em>
         </blockquote>
         <div className={styles.pillars}>
           <div className={styles.pillar}>

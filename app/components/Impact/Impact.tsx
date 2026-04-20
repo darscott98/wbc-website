@@ -3,16 +3,16 @@ import styles from './Impact.module.scss'
 
 const findings = [
   {
-    quote: 'Structured expressive writing produces measurable improvements in psychological wellbeing and post-traumatic growth in cancer survivors.',
-    source: 'Systematic review, 2025',
+    quote: 'A systematic review covering 34 studies and 4,316 participants found expressive writing produced improvements in fatigue, passive mood, and physical quality of life in cancer patients.',
+    source: 'Abu-Odah et al., Support Care Cancer, 2024',
   },
   {
-    quote: 'Forest bathing reduces cortisol, increases serotonin and oxytocin, and reduces depression scores — effects lasting at least one week after a single session.',
-    source: 'Clinical study, 2024',
+    quote: 'Forest bathing significantly reduced symptoms of depression and anxiety across 36 studies involving 3,554 participants.',
+    source: 'Siah et al., Int J Ment Health Nurs, 2023',
   },
   {
-    quote: 'Peer connection produces significant improvements in resilience, quality of life, and reductions in anxiety and fear of recurrence.',
-    source: 'Review of peer support for cancer survivors, 2023',
+    quote: 'Peer-to-peer support produced meaningful benefits for depression, anxiety, coping, and cancer-specific quality of life across 18 randomised controlled trials.',
+    source: 'Kiemen et al., J Cancer Res Clin Oncol, 2023',
   },
 ]
 

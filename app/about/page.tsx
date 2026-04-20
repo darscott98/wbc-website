@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import styles from './page.module.scss'
 
 export const metadata: Metadata = {
@@ -13,15 +14,21 @@ export default function AboutPage() {
       {/* ─── Page Header ──────────────────────────────────────── */}
       <header className={styles.pageHeader}>
         <div className={styles.headerInner}>
-          <p className={styles.eyebrow}>About Rebecca</p>
-          <h1 className={styles.pageTitle}>
-            Some programmes are born from training.<br />
-            This one was born from lived experience.
-          </h1>
-          <p className={styles.pageLead}>
-            Rebecca Perkins is the founder of Women Beyond Cancer — a programme she created
-            not from a distance, but from the inside out.
-          </p>
+          <div className={styles.headerContent}>
+            <p className={styles.eyebrow}>About Rebecca</p>
+            <h1 className={styles.pageTitle}>
+              Women Beyond Cancer was born from lived experience.
+            </h1>
+            <p className={styles.pageLead}>
+              Rebecca Perkins is the founder — she created this programme from the inside out, drawing on her own recovery.
+            </p>
+          </div>
+          <div className={styles.headerImage}>
+            <img
+              src="/images/OurBeautifulAdventure-BrandingShoot-Perkins-0120.jpg"
+              alt="Rebecca Perkins"
+            />
+          </div>
         </div>
       </header>
 
@@ -82,7 +89,7 @@ export default function AboutPage() {
               <div className={styles.credentialDot} />
               <h3 className={styles.credentialTitle}>NLP Coach</h3>
               <p className={styles.credentialText}>
-                NLP Coach Grounded in the understanding that cancer and its treatment reshape not just our bodies, but our inner narratives. Provides practical tools to help women notice unhelpful thought patterns and begin to consciously author new stories about themselves and their futures.
+                Grounded in the understanding that cancer and its treatment reshape not just our bodies, but our inner narratives. Provides practical tools to help women notice unhelpful thought patterns and begin to consciously author new stories about themselves and their futures.
               </p>
             </div>
           </div>

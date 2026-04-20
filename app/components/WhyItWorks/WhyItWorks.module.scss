@@ -15,10 +15,38 @@
 
 .headerInner {
   @include container;
-  max-width: 760px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $sp-12;
+  align-items: center;
+
+  @include below('md') {
+    grid-template-columns: 1fr;
+  }
+}
+
+.headerContent {
   display: flex;
   flex-direction: column;
   gap: $sp-6;
+}
+
+.headerImage {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: $r-lg;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+  }
+
+  @include below('md') {
+    display: none;
+  }
 }
 
 .eyebrow {
