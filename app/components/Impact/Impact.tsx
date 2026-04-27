@@ -23,8 +23,7 @@ export default function Impact() {
         <div className={styles.left}>
           <p className={styles.eyebrow}>The Evidence</p>
           <h2 className={styles.heading}>
-            Why these three<br />
-            approaches?
+            Why journaling, nature and community?
           </h2>
           <p className={styles.body}>
             The programme is built on three interlocking approaches, each
