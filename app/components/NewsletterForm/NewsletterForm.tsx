@@ -40,7 +40,12 @@ export default function NewsletterForm() {
         }),
       })
 
-      const data = await response.json()
+      let data: { error?: string; message?: string } = {}
+      try {
+        data = await response.json()
+      } catch {
+        // server returned a non-JSON body
+      }
 
       if (!response.ok) {
         throw new Error(data?.error || 'Unable to subscribe right now.')
@@ -53,11 +58,8 @@ export default function NewsletterForm() {
       setConsent(false)
     } catch (error) {
       setStatus('error')
-      setMessage(
-        error instanceof Error
-          ? error.message
-          : 'Something went wrong. Please try again.'
-      )
+      const message = error instanceof Error ? error.message : ''
+      setMessage(message || 'Something went wrong. Please try again.')
     }
   }
 

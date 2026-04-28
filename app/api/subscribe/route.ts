@@ -1,32 +1,13 @@
 const MAILERLITE_SUBSCRIBERS_URL = 'https://connect.mailerlite.com/api/subscribers'
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-type Env = {
-  MAILERLITE_API_TOKEN: string
-  MAILERLITE_GROUP_ID: string
-}
-
-type PagesContext = {
-  request: Request
-  env: Env
-}
-
-type SubscribeRequest = {
-  email?: string
-  name?: string
-  consent?: boolean
-}
-
 function json(data: unknown, status = 200): Response {
-  return new Response(JSON.stringify(data), {
-    status,
-    headers: { 'Content-Type': 'application/json' },
-  })
+  return Response.json(data, { status })
 }
 
-export async function onRequestPost({ request, env }: PagesContext) {
-  const apiToken = env.MAILERLITE_API_TOKEN
-  const groupId = env.MAILERLITE_GROUP_ID
+export async function POST(request: Request): Promise<Response> {
+  const apiToken = process.env.MAILERLITE_API_TOKEN
+  const groupId = process.env.MAILERLITE_GROUP_ID
 
   if (!apiToken) {
     return json({ error: 'MailerLite API token is not configured.' }, 500)
@@ -36,7 +17,7 @@ export async function onRequestPost({ request, env }: PagesContext) {
     return json({ error: 'MailerLite group ID is not configured.' }, 500)
   }
 
-  let body: SubscribeRequest
+  let body: { email?: string; name?: string; consent?: boolean }
 
   try {
     body = await request.json()
@@ -81,7 +62,6 @@ export async function onRequestPost({ request, env }: PagesContext) {
     try {
       data = await response.json() as Record<string, unknown>
     } catch {
-      // MailerLite returned a non-JSON body (e.g. an HTML error page)
       if (!response.ok) {
         return json({ error: 'Subscription failed. Please try again shortly.' }, response.status)
       }
